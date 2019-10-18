@@ -1,9 +1,9 @@
-﻿ <nav class="colorlib-nav" role="navigation">
+﻿<nav class="colorlib-nav" role="navigation">
     <div class="top-menu">
         <div class="container">
             <div class="row">
                 <div class="col-md-2">
-                    <div id="colorlib-logo"><a href="index.html">Robust</a></div>
+                    <div id="colorlib-logo"><a asp-area="" asp-controller="Home" asp-action="Index">Yogalates</a></div>
                 </div>
                 <div class="col-md-10 text-right menu-1">
                     <ul>
@@ -23,7 +23,8 @@
                         <li><a href="event.html">Events</a></li>
                         <li><a href="blog.html">Blog</a></li>
                         <li><a href="contact.html">Contact</a></li>
-                        <li class="btn-cta"><a href="#"><span><i class="icon-cart"></i></span></a></li>
+                        <partial name="_LoginPartial" />
+                        <li class="btn-cta"><a asp-area="" asp-controller="Home" asp-action="Privacy"><span><i class="icon-lock"></i></span></a></li>
                     </ul>
                 </div>
             </div>

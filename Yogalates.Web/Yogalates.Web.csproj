@@ -13,4 +13,12 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.3" />
   </ItemGroup>
 
+
+  <ItemGroup>
+    <ProjectReference Include="..\Yogalates.Common\Yogalates.Common.csproj" />
+    <ProjectReference Include="..\Yogalates.Data\Yogalates.Data.csproj" />
+    <ProjectReference Include="..\Yogalates.Models\Yogalates.Models.csproj" />
+    <ProjectReference Include="..\Yogalates.Services\Yogalates.Services.csproj" />
+  </ItemGroup>
+
 </Project>

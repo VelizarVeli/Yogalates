@@ -3,7 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.645
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yogalates.Web", "Yogalates.Web\Yogalates.Web.csproj", "{1286DA20-9F73-40FF-9861-D0EB8DD93BDD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Yogalates.Web", "Yogalates.Web\Yogalates.Web.csproj", "{1286DA20-9F73-40FF-9861-D0EB8DD93BDD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yogalates.Data", "Yogalates.Data\Yogalates.Data.csproj", "{EEB2E794-E3FE-49E6-842E-22D33F876319}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yogalates.Common", "Yogalates.Common\Yogalates.Common.csproj", "{2328E50A-F837-4C02-A25E-2AB9BC87BC6C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yogalates.Models", "Yogalates.Models\Yogalates.Models.csproj", "{4FF5E892-6A72-44B3-9B43-06BC9D06B033}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yogalates.Services", "Yogalates.Services\Yogalates.Services.csproj", "{AF5B4B2E-1595-4261-BD0B-8F74B5F17BFE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +23,22 @@ Global
 		{1286DA20-9F73-40FF-9861-D0EB8DD93BDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1286DA20-9F73-40FF-9861-D0EB8DD93BDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1286DA20-9F73-40FF-9861-D0EB8DD93BDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEB2E794-E3FE-49E6-842E-22D33F876319}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEB2E794-E3FE-49E6-842E-22D33F876319}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEB2E794-E3FE-49E6-842E-22D33F876319}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEB2E794-E3FE-49E6-842E-22D33F876319}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2328E50A-F837-4C02-A25E-2AB9BC87BC6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2328E50A-F837-4C02-A25E-2AB9BC87BC6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2328E50A-F837-4C02-A25E-2AB9BC87BC6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2328E50A-F837-4C02-A25E-2AB9BC87BC6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FF5E892-6A72-44B3-9B43-06BC9D06B033}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FF5E892-6A72-44B3-9B43-06BC9D06B033}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FF5E892-6A72-44B3-9B43-06BC9D06B033}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FF5E892-6A72-44B3-9B43-06BC9D06B033}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF5B4B2E-1595-4261-BD0B-8F74B5F17BFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF5B4B2E-1595-4261-BD0B-8F74B5F17BFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF5B4B2E-1595-4261-BD0B-8F74B5F17BFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF5B4B2E-1595-4261-BD0B-8F74B5F17BFE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

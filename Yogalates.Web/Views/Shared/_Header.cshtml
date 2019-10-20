@@ -7,9 +7,9 @@
                 </div>
                 <div class="col-md-10 text-right menu-1">
                     <ul>
-                        <li class="active"><a href="index.html">Home</a></li>
+                        <li class="active"><a asp-area="" asp-controller="Home" asp-action="Index">Начало</a></li>
                         <li class="has-dropdown">
-                            <a href="classes.html">Classes</a>
+                            <a href="classes.html">Курсове</a>
                             <ul class="dropdown">
                                 <li><a href="classes-single.html">Classes Single</a></li>
                                 <li><a href="#">Cardio Classes</a></li>
@@ -18,11 +18,11 @@
                                 <li><a href="#">Body Building</a></li>
                             </ul>
                         </li>
-                        <li><a href="schedule.html">Schedule</a></li>
-                        <li><a href="about.html">Trainers</a></li>
+                        <li><a href="schedule.html">График</a></li>
+                        <li><a href="about.html">Треньори</a></li>
                         <li><a href="event.html">Events</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a asp-area="" asp-controller="Blog" asp-action="Blog">Блог</a></li>
+                        <li><a href="contact.html">Контакти</a></li>
                         <partial name="_LoginPartial" />
                         <li class="btn-cta"><a asp-area="" asp-controller="Home" asp-action="Privacy"><span><i class="icon-lock"></i></span></a></li>
                     </ul>

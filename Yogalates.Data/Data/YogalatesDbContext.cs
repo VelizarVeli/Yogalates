@@ -10,5 +10,8 @@ namespace Yogalates.Data.Data
             : base(options)
         {
         }
+
+        public DbSet<Article> Articles { get; set; }
+        public DbSet<Comment> Comments { get; set; }
     }
 }

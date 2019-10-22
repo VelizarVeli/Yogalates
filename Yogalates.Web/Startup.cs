@@ -1,4 +1,5 @@
 ﻿using System;
+using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI;
@@ -10,6 +11,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Yogalates.Data.Data;
 using Yogalates.Models;
+using Yogalates.Services;
+using Yogalates.Services.Contracts;
+using Yogalates.Services.Mapping;
 
 namespace Yogalates.Web
 {
@@ -45,6 +49,15 @@ namespace Yogalates.Web
                 .AddEntityFrameworkStores<YogalatesDbContext>()
                 .AddDefaultTokenProviders();
 
+            RegisterGlobalServices(services);
+            var mappingConfig = new MapperConfiguration(mc =>
+            {
+                mc.AddProfile(new MappingProfile());
+            });
+
+            IMapper mapper = mappingConfig.CreateMapper();
+            services.AddSingleton(mapper);
+
             services.AddMvc(options =>
             {
                 options.Filters.Add(new AutoValidateAntiforgeryTokenAttribute());
@@ -78,6 +91,11 @@ namespace Yogalates.Web
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+        }
+
+        private void RegisterGlobalServices(IServiceCollection services)
+        {
+            services.AddScoped<IBlogService, BlogService>();
         }
     }
 }

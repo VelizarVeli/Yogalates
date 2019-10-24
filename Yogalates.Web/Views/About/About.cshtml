@@ -6,27 +6,8 @@
 <div class="colorlib-loader"></div>
 <div id="page">
     @await Html.PartialAsync("~/Views/About/PartialViews/_AboutTitle.cshtml")
-    <div id="colorlib-about">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 col-md-offset-2 row-pb-md animate-box">
-                    <div class="video colorlib-video" style="background-image: url(images/img_bg_1.jpg);">
-                        <a href="https://vimeo.com/channels/staffpicks/93951774" class="popup-vimeo"><i class="icon-play3"></i></a>
-                        <div class="overlay"></div>
-                    </div>
-                </div>
-                <div class="col-md-10 col-md-offset-1 text-center animate-box">
-                    <div class="about-wrap">
-                        <div class="heading-2">
-                            <h2>Robust Gym the leading fitness site</h2>
-                        </div>
-                        <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-                        <p>The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    @await Html.PartialAsync("~/Views/About/PartialViews/_Video.cshtml")
+
     <div class="colorlib-trainers">
         <div class="container">
             <div class="row">

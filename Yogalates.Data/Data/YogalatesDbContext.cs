@@ -13,5 +13,6 @@ namespace Yogalates.Data.Data
 
         public DbSet<Article> Articles { get; set; }
         public DbSet<Comment> Comments { get; set; }
+        public DbSet<Service> Services { get; set; }
     }
 }

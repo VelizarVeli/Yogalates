@@ -96,6 +96,7 @@ namespace Yogalates.Web
         private void RegisterGlobalServices(IServiceCollection services)
         {
             services.AddScoped<IBlogService, BlogService>();
+            services.AddScoped<IAboutService, AboutService>();
         }
     }
 }

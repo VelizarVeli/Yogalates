@@ -454,7 +454,7 @@ h1, h2, h3, h4, h5, h6, figure {
     .intro-flex .one-third .price {
       display: block;
       position: absolute;
-      bototom: 0;
+      bottom: 0;
       left: 2em;
       font-size: 14px;
       background: #DC2F2F;
@@ -531,7 +531,7 @@ h1, h2, h3, h4, h5, h6, figure {
       -moz-text-fill-color: transparent;
       -ms-text-fill-color: transparent;
       -o-text-fill-color: transparent;
-      text-fill-color: transparent; }
+      background-color: transparent; }
   .services .desc h3 {
     font-size: 16px;
     font-weight: 700;
@@ -629,7 +629,7 @@ h1, h2, h3, h4, h5, h6, figure {
         -moz-text-fill-color: transparent;
         -ms-text-fill-color: transparent;
         -o-text-fill-color: transparent;
-        text-fill-color: transparent; }
+        background-color: transparent; }
       .schedule .schedule-flex .entry-forth .time {
         display: block; }
         .schedule .schedule-flex .entry-forth .time span {
@@ -967,7 +967,7 @@ h1, h2, h3, h4, h5, h6, figure {
         -moz-text-fill-color: transparent;
         -ms-text-fill-color: transparent;
         -o-text-fill-color: transparent;
-        text-fill-color: transparent; }
+        background-color: transparent; }
       .event-entry .desc .meta .day {
         font-size: 36px; }
       .event-entry .desc .meta .month {
@@ -1003,7 +1003,7 @@ h1, h2, h3, h4, h5, h6, figure {
         -moz-text-fill-color: transparent;
         -ms-text-fill-color: transparent;
         -o-text-fill-color: transparent;
-        text-fill-color: transparent; }
+        background-color: transparent; }
   .event-entry h2 {
     font-size: 24px;
     line-height: 1.4; }
@@ -1189,7 +1189,7 @@ input[type="text"] {
         -moz-text-fill-color: transparent;
         -ms-text-fill-color: transparent;
         -o-text-fill-color: transparent;
-        text-fill-color: transparent; }
+        background-color: transparent; }
 
 .colorlib-heading {
   margin-bottom: 5em; }
@@ -1380,7 +1380,7 @@ input[type="text"] {
           -moz-text-fill-color: transparent;
           -ms-text-fill-color: transparent;
           -o-text-fill-color: transparent;
-          text-fill-color: transparent; }
+          background-color: transparent; }
   #colorlib-footer .colorlib-social-icons li a {
     padding-left: 10px;
     padding-right: 10px; }
@@ -1762,3 +1762,13 @@ input[type="text"] {
 
 .js .animate-box {
   opacity: 0; }
+
+#main_logo {
+    max-width: 95%;
+    height: auto;
+    min-width: 10%;
+    opacity: 0.5;
+}
+#main_logo:hover {
+    opacity: 0.8;
+}

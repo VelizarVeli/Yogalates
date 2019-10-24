@@ -3,11 +3,15 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-2">
-                    <div id="colorlib-logo"><a asp-area="" asp-controller="Home" asp-action="Index">Yogalates</a></div>
+                    <a class="nav-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                        <img src="~/images/logo.jpg" class="img-fluid" alt="Responsive image" id="main_logo">
+                    </a>
+                    <div class="nav-toggle"></div>
                 </div>
                 <div class="col-md-10 text-right menu-1">
                     <ul>
                         <li class="active"><a asp-area="" asp-controller="Home" asp-action="Index">Начало</a></li>
+                        <li><a asp-area="" asp-controller="About" asp-action="About">За мен</a></li>
                         <li class="has-dropdown">
                             <a href="classes.html">Курсове</a>
                             <ul class="dropdown">
@@ -19,11 +23,9 @@
                             </ul>
                         </li>
                         <li><a href="schedule.html">График</a></li>
-                        <li><a href="about.html">Треньори</a></li>
-                        <li><a href="event.html">Events</a></li>
+                        <li><a href="event.html">Събития</a></li>
                         <li><a asp-area="" asp-controller="Blog" asp-action="Blog">Блог</a></li>
                         <li><a href="contact.html">Контакти</a></li>
-                        <partial name="_LoginPartial" />
                         <li class="btn-cta"><a asp-area="" asp-controller="Home" asp-action="Privacy"><span><i class="icon-lock"></i></span></a></li>
                     </ul>
                 </div>

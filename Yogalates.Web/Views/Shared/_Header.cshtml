@@ -10,9 +10,9 @@
                 </div>
                 <div class="col-md-10 text-right menu-1">
                     <ul>
-                        <li class="active"><a asp-area="" asp-controller="Home" asp-action="Index">Начало</a></li>
-                        <li><a asp-area="" asp-controller="About" asp-action="About">За мен</a></li>
-                        <li class="has-dropdown">
+                        <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "Index" ? "active" : "")"><a asp-area="" asp-controller="Home" asp-action="Index">Начало</a></li>
+                        <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "About" ? "active" : "")"><a asp-area="" asp-controller="About" asp-action="About">За мен</a></li>
+                        <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "Classes" ? "active" : "") has-dropdown">
                             <a asp-area="" asp-controller="Classes" asp-action="Classes">Курсове</a>
                             <ul class="dropdown">
                                 <li><a href="classes-single.html">Classes Single</a></li>
@@ -22,10 +22,10 @@
                                 <li><a href="#">Body Building</a></li>
                             </ul>
                         </li>
-                        <li><a href="schedule.html">График</a></li>
-                        <li><a href="event.html">Събития</a></li>
-                        <li><a asp-area="" asp-controller="Blog" asp-action="Blog">Блог</a></li>
-                        <li><a asp-area="" asp-controller="Home" asp-action="Contact">Контакти</a></li>
+                        <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "Schedule" ? "active" : "")"><a href="schedule.html">График</a></li>
+                        <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "Event" ? "active" : "")"><a href="event.html">Събития</a></li>
+                        <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "Blog" ? "active" : "")"><a asp-area="" asp-controller="Blog" asp-action="Blog">Блог</a></li>
+                        <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "Contact" ? "active" : "")"><a asp-area="" asp-controller="Home" asp-action="Contact">Контакти</a></li>
                         <li class="btn-cta"><a asp-area="" asp-controller="Home" asp-action="Privacy"><span><i class="icon-lock"></i></span></a></li>
                     </ul>
                 </div>

@@ -4,71 +4,66 @@
 }
 <div class="colorlib-loader"></div>
 <div id="page">
-    @await Html.PartialAsync("~/Views/Home/PartialViews/Contact/_Aside.cshtml")
+    @await Html.PartialAsync("~/Views/Home/PartialViews/Contact/_ContactTitle.cshtml")
     <div id="colorlib-contact">
         <div class="container">
             <div class="row">
                 <div class="col-md-10 col-md-offset-1 animate-box">
-                    <h2>Contact Information</h2>
+                    <h2>Информация за контакти</h2>
                     <div class="row">
                         <div class="col-md-12">
                             <div class="contact-info-wrap-flex">
                                 <div class="con-info">
-                                    <p><span><i class="icon-location-2"></i></span> 198 West 21th Street, <br> Suite 721 New York NY 10016</p>
+                                    <p><span><i class="icon-location-2"></i></span><br/> кв.Здравец, <br/>ул. Чипровци 32 <br/> ЛИДЛ</p>
                                 </div>
                                 <div class="con-info">
-                                    <p><span><i class="icon-phone3"></i></span> <a href="tel://1234567920">+ 1235 2355 98</a></p>
+                                    <p><span><i class="icon-phone3"></i></span> <a href="tel://0878947135"><br/>+359 87 894 7135</a></p>
+                                </div>
+                                <div class="con-info col-6">
+                                    <p><span><i class="icon-paperplane"></i></span> <a href="mailto:yogalatesdenyruse@gmail.com">yogalatesdenyruse<br/>@@gmail.com</a></p>
                                 </div>
                                 <div class="con-info">
-                                    <p><span><i class="icon-paperplane"></i></span> <a href="mailto:info@yoursite.com">info@yoursite.com</a></p>
-                                </div>
-                                <div class="con-info">
-                                    <p><span><i class="icon-globe"></i></span> <a href="#">yourwebsite.com</a></p>
+                                    <p><span><i class="icon-globe"></i></span> <a href="#"><br/>yourwebsite.com</a></p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-10 col-md-offset-1 animate-box">
-                    <h2>Get In Touch</h2>
+                    <h2>Свържете се с нас</h2>
                     <form action="#">
                         <div class="row form-group">
                             <div class="col-md-6">
-                                <!-- <label for="fname">First Name</label> -->
-                                <input type="text" id="fname" class="form-control" placeholder="Your firstname">
+                                <input type="text" id="fname" class="form-control" placeholder="Име">
                             </div>
                             <div class="col-md-6">
-                                <!-- <label for="lname">Last Name</label> -->
-                                <input type="text" id="lname" class="form-control" placeholder="Your lastname">
+                                <input type="text" id="lname" class="form-control" placeholder="Фамилия">
                             </div>
                         </div>
                         <div class="row form-group">
                             <div class="col-md-12">
-                                <!-- <label for="email">Email</label> -->
-                                <input type="text" id="email" class="form-control" placeholder="Your email address">
+                                <input type="text" id="email" class="form-control" placeholder="Имейл адрес">
                             </div>
                         </div>
                         <div class="row form-group">
                             <div class="col-md-12">
-                                <!-- <label for="subject">Subject</label> -->
-                                <input type="text" id="subject" class="form-control" placeholder="Your subject of this message">
+                                <input type="text" id="subject" class="form-control" placeholder="Заглавие">
                             </div>
                         </div>
                         <div class="row form-group">
                             <div class="col-md-12">
-                                <!-- <label for="message">Message</label> -->
-                                <textarea name="message" id="message" cols="30" rows="10" class="form-control" placeholder="Say something about us"></textarea>
+                                <textarea name="message" id="message" cols="30" rows="10" class="form-control" placeholder="Кажете нещо за нас"></textarea>
                             </div>
                         </div>
                         <div class="form-group">
-                            <input type="submit" value="Send Message" class="btn btn-primary">
+                            <input type="submit" value="Изпрати" class="btn btn-primary">
                         </div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
-    //TODO add Google Maps here
+    @*TODO add Google Maps here*@
 </div>
 <div class="gototop js-top">
     <a href="#" class="js-gotop"><i class="icon-arrow-up2"></i></a>

@@ -22,7 +22,7 @@
                                 <li><a href="#">Body Building</a></li>
                             </ul>
                         </li>
-                        <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "Schedule" ? "active" : "")"><a href="schedule.html">График</a></li>
+                        <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "Schedule" ? "active" : "")"><a asp-area="" asp-controller="Schedule" asp-action="Schedule">График</a></li>
                         <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "Event" ? "active" : "")"><a href="event.html">Събития</a></li>
                         <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "Blog" ? "active" : "")"><a asp-area="" asp-controller="Blog" asp-action="Blog">Блог</a></li>
                         <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "Contact" ? "active" : "")"><a asp-area="" asp-controller="Home" asp-action="Contact">Контакти</a></li>

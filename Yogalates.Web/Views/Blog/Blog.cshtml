@@ -1,90 +1,59 @@
-﻿
+﻿@using System.Globalization
+@model List<Yogalates.Common.ViewModels.ArticleViewModel>
 @{
     ViewData["Title"] = "Blog";
     Layout = "~/Views/Shared/_Layout.cshtml";
 
 }
+@{ var counter = 0;}
 <div class="colorlib-loader"></div>
 <div id="page">
     @await Html.PartialAsync("~/Views/Blog/PartialViews/_BlogTitle.cshtml")
     <div class="colorlib-blog">
         <div class="container">
-            <div class="row">
-                <div class="col-md-4 animate-box">
-                    <article class="article-entry">
-                        <a href="blog.html" class="blog-img" style="background-image:url('@Url.Content("~/images/blog-1.jpg")');">
-                            <p class="meta"><span class="day">18</span><span class="month">Apr</span></p>
-                        </a>
-                        <div class="desc">
-                            <p class="admin"><span>Posted by:</span> <span>Noah Henderson</span></p>
-                            <h2><a href="blog.html">Need workout motivation</a></h2>
-                            <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life</p>
-                        </div>
-                    </article>
-                </div>
-                <div class="col-md-4 animate-box">
-                    <article class="article-entry">
-                        <a href="blog.html" class="blog-img" style="background-image:url('@Url.Content("~/images/blog-2.jpg")');">
-                            <p class="meta"><span class="day">18</span><span class="month">Apr</span></p>
-                        </a>
-                        <div class="desc">
-                            <p class="admin"><span>Posted by:</span> <span>Noah Henderson</span></p>
-                            <h2><a href="blog.html">Need workout motivation</a></h2>
-                            <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life</p>
-                        </div>
-                    </article>
-                </div>
-                <div class="col-md-4 animate-box">
-                    <article class="article-entry">
-                        <a href="blog.html" class="blog-img" style="background-image:url('@Url.Content("~/images/blog-3.jpg")');">
-                            <p class="meta"><span class="day">18</span><span class="month">Apr</span></p>
-                        </a>
-                        <div class="desc">
-                            <p class="admin"><span>Posted by:</span> <span>Noah Henderson</span></p>
-                            <h2><a href="blog.html">Need workout motivation</a></h2>
-                            <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life</p>
-                        </div>
-                    </article>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4 animate-box">
-                    <article class="article-entry">
-                        <a href="blog.html" class="blog-img" style="background-image:url('@Url.Content("~/images/blog-4.jpg")');">
-                            <p class="meta"><span class="day">18</span><span class="month">Apr</span></p>
-                        </a>
-                        <div class="desc">
-                            <p class="admin"><span>Posted by:</span> <span>Noah Henderson</span></p>
-                            <h2><a href="blog.html">Need workout motivation</a></h2>
-                            <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life</p>
-                        </div>
-                    </article>
-                </div>
-                <div class="col-md-4 animate-box">
-                    <article class="article-entry">
-                        <a href="blog.html" class="blog-img" style="background-image:url('@Url.Content("~/images/blog-5.jpg")');">
-                            <p class="meta"><span class="day">18</span><span class="month">Apr</span></p>
-                        </a>
-                        <div class="desc">
-                            <p class="admin"><span>Posted by:</span> <span>Noah Henderson</span></p>
-                            <h2><a href="blog.html">Need workout motivation</a></h2>
-                            <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life</p>
-                        </div>
-                    </article>
-                </div>
-                <div class="col-md-4 animate-box">
-                    <article class="article-entry">
-                        <a href="blog.html" class="blog-img" style="background-image:url('@Url.Content("~/images/blog-6.jpg")');">
-                            <p class="meta"><span class="day">18</span><span class="month">Apr</span></p>
-                        </a>
-                        <div class="desc">
-                            <p class="admin"><span>Posted by:</span> <span>Noah Henderson</span></p>
-                            <h2><a href="blog.html">Need workout motivation</a></h2>
-                            <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life</p>
-                        </div>
-                    </article>
-                </div>
-            </div>
+            @if (Model.Count != 0)
+            {
+                for (int i = 0; ; i += 3)
+                {
+                    <div class="row">
+                        @for (int j = 0; j < 3; j++)
+                        {
+                            if (Model[j].Content.Length > 100)
+                            {
+                                Model[j].Content = Model[j].Content.Substring(0, 99) + "...";
+                            }
+
+                            <div class="col-md-4 animate-box">
+                                <article class="article-entry">
+                                    <a href="blog.html" class="blog-img" style="background-image: url('@Url.Content(Model[i + j].Image800X533)');">
+                                        <p class="meta">
+                                            <span class="day">@Model[i + j].Date.ToString("dd", new CultureInfo("bg-BG"))</span>
+                                            <span class="month">@Model[i + j].Date.ToString("MMMM", new CultureInfo("bg-BG")).ToUpper()</span>
+                                        </p>
+                                    </a>
+                                    <div class="desc">
+                                        <h2><a href="blog.html">@Model[i + j].Name</a></h2>
+                                        <p>@Model[i + j].Content</p>
+                                    </div>
+                                </article>
+                            </div>
+                            counter++;
+                            if (counter == Model.Count)
+                            {
+                                break;
+                            }
+                        }
+                    </div>
+                    if (counter == Model.Count)
+                    {
+                        break;
+                    }
+                }
+            }
+            else
+            {
+                <h1>Не сме написали още нито една статия в блога!</h1>
+            }
         </div>
     </div>
     @await Html.PartialAsync("~/Views/Shared/_ContactPointer.cshtml")

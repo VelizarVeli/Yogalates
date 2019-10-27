@@ -25,12 +25,6 @@ namespace Yogalates.Services
                 Content = v.Content,
                 Date = v.Date,
                 Image800X533 = v.Image800X533,
-                Comments = v.Comments.Select(c => new CommentViewModel
-                {
-                    CommentDate = c.CommentDate,
-                    CommenterName = c.CommenterName,
-                    
-                }).ToList()
 
             }).ToListAsync();
 

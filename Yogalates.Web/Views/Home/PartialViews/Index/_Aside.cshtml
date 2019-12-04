@@ -1,9 +1,9 @@
 ﻿<aside id="colorlib-hero">
     <div class="flexslider">
         <ul class="slides">
-            @for (int i = 1; i <= 4; i++)
+            @for (int i = 1; i <= 5; i++)
             {
-                <li style="background-image: url(images/@i-img-bg.jpg);">
+                <li style="background-image: url('@Url.Content("~/images/"+i+"-img-bg.jpg")');">
                     <div class="overlay"></div>
                     <div class="container-fluid">
                         <div class="row">
@@ -20,6 +20,10 @@
                                     else if (i == 3)
                                     {
                                         <h1>Спри с пожеланията, започни да ги изпълняваш</h1>
+                                    }
+                                    else if (i == 4)
+                                    {
+                                        <h1>Разликата между успешният човек и всички останали не е липса на сила, не е липса на знания, а липса на воля</h1>
                                     }
                                     else
                                     {
